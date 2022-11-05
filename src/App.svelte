@@ -1,7 +1,6 @@
 <script>
   import About from './components/About.svelte'
-  import WorkVideo from './components/WorkVideo.svelte'
-  import WorkStills from './components/WorkStills.svelte'
+  import Work from './components/Work.svelte'
   import Contact from './components/Contact.svelte'
 </script>
 
@@ -10,8 +9,7 @@
     <About />
   </div>
   <div id="work-cont">
-    <!-- <WorkVideo /> -->
-    <WorkStills />
+    <Work />
   </div>
   <div id="contact-cont">
     <Contact />
