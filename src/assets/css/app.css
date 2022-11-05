@@ -1,4 +1,8 @@
 :root {
+  --evelyna-primary: #ef9ab2;
+  --evelyna-black: #6d6d6d;
+  --evelyna-white: #fff3f8;
+
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;

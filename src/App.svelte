@@ -1,10 +1,21 @@
 <script>
+  import About from './components/About.svelte'
+  import WorkVideo from './components/WorkVideo.svelte'
+  import WorkStills from './components/WorkStills.svelte'
+  import Contact from './components/Contact.svelte'
 </script>
 
 <main>
-  <div id="about-cont" />
-  <div id="work-cont" />
-  <div id="contact-cont" />
+  <div id="about-cont">
+    <About />
+  </div>
+  <div id="work-cont">
+    <!-- <WorkVideo /> -->
+    <WorkStills />
+  </div>
+  <div id="contact-cont">
+    <Contact />
+  </div>
 
   <!-- <h1>Vite + Svelte</h1>
   <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p> -->
@@ -14,7 +25,7 @@
   main {
     height: 100vh;
     padding: 2rem;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1.2fr 2.5fr 0.3fr;
     gap: 0px 0px;
@@ -22,7 +33,7 @@
     grid-template-areas:
       '.'
       '.'
-      '.';
+      '.'; */
   }
 
   #about-cont {
