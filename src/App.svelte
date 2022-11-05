@@ -12,8 +12,7 @@
 
 <style>
   main {
-    /* width: 100%; */
-    height: 100%;
+    height: 100vh;
     padding: 2rem;
     display: grid;
     grid-template-columns: 1fr;
