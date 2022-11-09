@@ -1,5 +1,6 @@
 import './assets/css/app.css'
 import './assets/css/fonts.css'
+import './lib/fontAwesome.js'
 // @ts-ignore
 import App from './App.svelte'
 

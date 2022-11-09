@@ -92,7 +92,7 @@
           <figure class="w-lightbox-figure">
             <img
               class="w-lightbox-img w-lightbox-image"
-              src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/628681824b5d120d3879c3dd_20210902-210902000000010002-2.jpg"
+              src={picsData.find((p) => p.id === activePic).src}
               alt=""
             />
           </figure>
@@ -505,14 +505,6 @@
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-  }
-
-  .w-lightbox-thumbnail .w-lightbox-wide {
-    left: 50%;
-    height: 100%;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
   }
 
   @media (min-width: 768px) {

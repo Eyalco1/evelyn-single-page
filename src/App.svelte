@@ -2,26 +2,36 @@
   import About from './components/About.svelte'
   import Work from './components/Work.svelte'
   import Contact from './components/Contact.svelte'
+  import Footer from './components/Footer.svelte'
 </script>
 
-<main>
-  <div id="about-cont">
-    <About />
-  </div>
-  <div id="work-cont">
-    <Work />
-  </div>
-  <div id="contact-cont">
-    <Contact />
-  </div>
+<div class="all-wrap">
+  <main>
+    <div id="about-cont">
+      <About />
+    </div>
+    <div id="work-cont">
+      <Work />
+    </div>
+    <div id="contact-cont">
+      <Contact />
+    </div>
+  </main>
 
-  <!-- <h1>Vite + Svelte</h1>
-  <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p> -->
-</main>
+  <div id="footer-cont">
+    <Footer />
+  </div>
+</div>
 
 <style>
+  .all-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
   main {
-    height: 100vh;
+    /* height: 100vh; */
     padding: 2rem;
     /* display: grid;
     grid-template-columns: 1fr;
@@ -34,7 +44,7 @@
       '.'; */
   }
 
-  #about-cont {
+  /* #about-cont {
     background-color: red;
   }
 
@@ -45,6 +55,10 @@
   #contact-cont {
     background-color: green;
   }
+
+  #footer-cont {
+    background-color: orange;
+  } */
 
   /* .read-the-docs {
     color: #888;
