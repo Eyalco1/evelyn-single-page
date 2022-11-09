@@ -1,11 +1,16 @@
 <script>
+  import { Link } from 'svelte-navigator'
   import About from './components/About.svelte'
   import Work from './components/Work.svelte'
   import Contact from './components/Contact.svelte'
   import Footer from './components/Footer.svelte'
+  import Navbar from './components/Navbar.svelte'
 </script>
 
 <div class="all-wrap">
+  <div id="nav-cont">
+    <Navbar />
+  </div>
   <main>
     <div id="about-cont">
       <About />
@@ -59,6 +64,10 @@
   #footer-cont {
     background-color: orange;
   } */
+
+  #nav-cont {
+    padding: 2rem;
+  }
 
   /* .read-the-docs {
     color: #888;

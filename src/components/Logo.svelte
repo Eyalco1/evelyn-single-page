@@ -37,7 +37,7 @@
   })
 
   export let color = 'var(--evelyna-primary)'
-  export let eyeColor = 'white'
+  export let eyeColor = 'var(--bg-color)'
 </script>
 
 <div id="logo-container" class="hover-scale">

@@ -20,35 +20,25 @@
   export let currentPage = '/'
 </script>
 
-<nav>
-  <!-- <div class="link-wrap" on:click={() => setCurPage('work')}>
-    <Link to="/work"
-      ><span class:bold={curPageValue === 'work'}>Work</span></Link
-    >
-  </div> -->
-  <Link to="/work"
-    ><span
-      on:click={() => setCurPage('work')}
-      on:keyup={() => setCurPage('work')}
-      class:bold={currentPage === 'work'}>Work</span
-    ></Link
-  >
-  <Link to="/about"
-    ><span
-      on:click={() => setCurPage('about')}
-      on:keyup={() => setCurPage('about')}
-      class:bold={currentPage === 'about'}>About</span
-    ></Link
-  >
-  <Link to="/contact"
-    ><span
-      on:click={() => setCurPage('contact')}
-      on:keyup={() => setCurPage('contact')}
-      class:bold={currentPage === 'contact'}>Contact</span
-    ></Link
-  >
-</nav>
+<span>Evelyna</span>
 
+<!-- <nav>
+  <span
+    on:click={() => setCurPage('work')}
+    on:keyup={() => setCurPage('work')}
+    class:bold={currentPage === 'work'}>Work</span
+  >
+  <span
+    on:click={() => setCurPage('about')}
+    on:keyup={() => setCurPage('about')}
+    class:bold={currentPage === 'about'}>About</span
+  >
+  <span
+    on:click={() => setCurPage('contact')}
+    on:keyup={() => setCurPage('contact')}
+    class:bold={currentPage === 'contact'}>Contact</span
+  >
+</nav> -->
 <style>
   /* .link-wrap {
     display: inline;
@@ -64,12 +54,13 @@
     margin-bottom: auto;
   }
 
-  nav span {
+  nav span,
+  span {
     font-family: Poppins;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 800;
     margin: 0 10px;
-    color: var(--evelyna-black);
+    color: var(--evelyna-primary);
 
     /* background: linear-gradient(
         to right,
@@ -89,8 +80,10 @@
     transition: all 200ms;
   }
 
-  nav span:hover {
+  nav span:hover,
+  span:hover {
     background-size: 0 3px, 100% 3px;
     color: var(--evelyna-primary);
+    user-select: none;
   }
 </style>
