@@ -19,6 +19,12 @@
 </div>
 
 <style>
+  span,
+  p {
+    color: var(--title-color);
+    font-family: Ploni;
+  }
+
   .about-cont {
     padding: 0px;
     margin-bottom: 50px;
@@ -31,19 +37,16 @@
   }
 
   span.my-name-is {
-    font-family: Ploni;
     font-size: 60px;
     font-weight: 800;
   }
 
   span.opening {
-    font-family: Ploni;
     font-size: 28px;
     font-weight: 800;
   }
 
   p.introduction {
-    font-family: Ploni;
     font-size: 20px;
     font-weight: 400;
     padding-bottom: 30px;

@@ -28,7 +28,7 @@
 
 <style>
   span {
-    font-family: Poppins;
+    font-family: Ploni;
     font-size: 24px;
     font-weight: 600;
     user-select: none;

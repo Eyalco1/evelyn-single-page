@@ -18,6 +18,7 @@
     bottom: 0;
     width: 100%;
     user-select: none;
+    font-family: Ploni;
   }
 
   .f-container {
@@ -54,7 +55,6 @@
 
   #copy {
     text-align: center;
-    font-family: Ploni;
     font-size: 18px;
     /* color: var(--evelyna-white); */
   }

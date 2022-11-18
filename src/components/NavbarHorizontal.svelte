@@ -51,7 +51,7 @@
 
   /* nav span,
   span {
-    font-family: Poppins;
+    font-family: Ploni;
     font-size: 30px;
     font-weight: 800;
     margin: 0 10px;
