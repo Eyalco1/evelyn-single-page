@@ -3,7 +3,8 @@
   --evelyna-black: #6d6d6d;
   --evelyna-white: #fff3f8;
   --bg-color: #242424;
-  --title-color: rgba(255, 255, 255, 0.87)
+  --title-color: rgba(255, 255, 255, 0.87);
+  --evelyna-primary-faded: rgba(239, 154, 178, 0.85);
 
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -19,6 +20,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+div,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+em {
+  font-family: Ploni;
+  color: var(--title-color);
 }
 
 a {

@@ -37,7 +37,7 @@
   }
 
   .active-span {
-    color: red;
+    color: var(--evelyna-primary);
   }
 
   span:hover {

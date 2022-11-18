@@ -2,6 +2,10 @@
   import CollagePic from './CollagePic.svelte'
   import StillsSlideshow from './StillsSlideshow.svelte'
   import { picsData } from '../data'
+  import { reorderPicsArray } from '../utils'
+
+  const reorderedPicsData = reorderPicsArray(picsData)
+  // console.log(reorderedPicsData)
 
   let isSlideshowOpen = false
   let activePic = null
@@ -17,7 +21,7 @@
     <div style="opacity: 1;" class="c-container">
       <div class="c-stills">
         <div role="list" class="c-stills__ul is--2-col w-dyn-items">
-          {#each picsData as { src, alt, id }}
+          {#each reorderedPicsData as { src, alt, id }}
             <CollagePic
               {src}
               {alt}
@@ -84,7 +88,7 @@
     flex: 1;
   }
 
-  .c-stills__ul {
+  /* .c-stills__ul {
     margin-bottom: 60px;
     grid-auto-flow: row dense;
     grid-auto-columns: 1fr;
@@ -93,36 +97,13 @@
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto-fit, 1px);
-  }
+  } */
 
   .c-stills__ul.is--2-col {
     -webkit-column-count: 2;
-    column-count: 2;
+    column-count: 3;
     -webkit-column-gap: 20px;
     column-gap: 20px;
-  }
-
-  @media screen and (max-width: 991px) {
-    /* .c-stills__ul,
-    img,
-    .c-stills__li {
-      padding: 0;
-      margin: 0;
-    } */
-
-    /* .c-stills__ul {
-      column-gap: 30px;
-    } */
-
-    /* .c-site {
-      overflow: visible;
-      margin-right: 0;
-      margin-left: 0;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-    } */
   }
 
   @media screen and (max-width: 1000px) {
@@ -164,12 +145,12 @@
       flex: 0 auto;
     }
 
-    .c-stills__ul {
+    /* .c-stills__ul {
       -webkit-column-count: 2;
       column-count: 2;
       -webkit-column-gap: 18px;
       column-gap: 18px;
-    }
+    } */
 
     .c-stills__ul.is--2-col {
       -webkit-column-gap: 12px;

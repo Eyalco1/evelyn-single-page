@@ -15,9 +15,9 @@
               sizes={`${size}px`}
             />
           </div>
-          <span class="overlay svelte-15pnq89">
+          <span class="overlay">
             <span>
-              <strong class="svelte-15pnq89">
+              <strong>
                 {title}
               </strong>
             </span>
@@ -118,20 +118,17 @@
   }
 
   .overlay strong {
-    font-family: Lato, Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;
-    font-weight: 300;
-    font-size: 1.8rem;
+    /* font-family: Lato, Helvetica Neue, Helvetica, Arial, Verdana, sans-serif; */
+    font-weight: 500;
+    font-size: 1.6rem;
     font-style: normal;
     line-height: 1.75;
     display: block;
     margin: 0;
     letter-spacing: 0;
     text-transform: none;
-  }
-
-  .overlay strong {
     font-style: normal;
-    color: #000;
+    color: var(--title-color);
   }
 
   @media (hover: hover) {
@@ -145,7 +142,7 @@
       left: 0;
       padding: 1.6rem;
       position: absolute;
-      background: rgba(255, 255, 255, 0.8);
+      background: var(--evelyna-primary-faded);
       -moz-transition: opacity 0.25s ease-in-out;
       -webkit-transition: opacity 0.25s ease-in-out;
       -o-transition: opacity 0.25s ease-in-out;
@@ -158,10 +155,6 @@
       height: 100%;
       content: '';
       vertical-align: middle;
-    }
-
-    .overlay strong {
-      color: #000;
     }
 
     .overlay > span {
