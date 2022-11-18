@@ -1,4 +1,6 @@
 <script>
+  import { createEventDispatcher } from 'svelte'
+
   let picsData = [
     {
       src: 'https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/628681824b5d120d3879c3dd_20210902-210902000000010002-2.jpg',
@@ -74,12 +76,43 @@
     }
   ]
 
+  const dispatch = createEventDispatcher()
+
+  function closeSlideshow() {
+    dispatch('close')
+  }
+
+  const movePictureRight = () => {
+    activePic++
+  }
+
+  const movePictureLeft = () => {
+    activePic--
+  }
+
+  const generalClick = (evt) => {
+    console.log(evt.target.tagName)
+    if (evt.target.tagName !== 'IMG' && evt.target.tagName !== 'I') {
+      closeSlideshow()
+    }
+  }
+
+  const generalKeyPress = (evt) => {
+    if (evt.key === 'Escape') {
+      closeSlideshow()
+    }
+  }
+
+  window.addEventListener('keyup', generalKeyPress)
+
   export let activePic
 </script>
 
 <div
   class="w-lightbox-backdrop"
   style="transition: opacity 300ms ease 0s; opacity: 1;"
+  on:click={(evt) => generalClick(evt)}
+  on:keypress={(evt) => generalClick(evt)}
 >
   <div class="w-lightbox-container">
     <div class="w-lightbox-content w-lightbox-group">
@@ -93,33 +126,46 @@
             <img
               class="w-lightbox-img w-lightbox-image"
               src={picsData.find((p) => p.id === activePic).src}
-              alt=""
+              alt={picsData.find((p) => p.id === activePic).alt}
             />
           </figure>
         </div>
       </div>
       <div
-        class="w-lightbox-control w-lightbox-left w-lightbox-inactive"
+        class="w-lightbox-control w-lightbox-left"
+        class:w-lightbox-inactive={picsData.find((p) => p.id === activePic)
+          .id === 0}
         role="button"
-        aria-hidden="true"
-        aria-controls="w-lightbox-view"
         aria-label="previous image"
         tabindex="-1"
-      />
+        on:click={() => movePictureLeft()}
+        on:keypress={() => movePictureLeft()}
+      >
+        <i class="fa-solid fa-chevron-left fa-3x" />
+      </div>
       <div
         class="w-lightbox-control w-lightbox-right"
+        class:w-lightbox-inactive={picsData.find((p) => p.id === activePic)
+          .id ===
+          picsData.length - 1}
         role="button"
-        aria-hidden="false"
-        aria-controls="w-lightbox-view"
         aria-label="next image"
         tabindex="0"
-      />
+        on:click={() => movePictureRight()}
+        on:keypress={() => movePictureRight()}
+      >
+        <i class="fa-solid fa-chevron-right fa-3x" />
+      </div>
       <div
         class="w-lightbox-control w-lightbox-close"
         role="button"
         aria-label="close lightbox"
         tabindex="0"
-      />
+        on:click={closeSlideshow}
+        on:keypress={closeSlideshow}
+      >
+        <i class="fa-solid fa-xmark fa-lg" />
+      </div>
     </div>
     <div class="w-lightbox-strip" role="tablist">
       {#each picsData as { src, alt, id }}
@@ -141,172 +187,6 @@
           </div>
         </div>
       {/each}
-
-      <!-- <div
-        class="w-lightbox-item active-lightbox"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 2 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/628681354b1da92337d1c529_20210831-210831000000030003.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item active-lightbox"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 3 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/6261686ffd8092a472ccb49c_20210831-210831000000040002.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 4 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-wide w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/62616ab245a097f8751d6f97_20210902-210902000000010005.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 5 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/5ed6451ed9b81a5a0941b792_90353827_251451035883777_2164085926595527432_n.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 6 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/6266c32416f808767aa5030e_20200317-200317000000050021-2.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 7 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/5db858647cba6272c868fa09_FFF1.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 8 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/62616b13cde0428f0da753ac_20210831-210831000000020008.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 9 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/6266cc38b9fbc454d3536161_20210902-210902000000010003.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 10 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/5db85b119aa2d737b7ffa5f0_Young%20Fisherman%20-%20Mexico.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 11 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/5ed644f881818868d908af4c_90348670_570626850328089_727146915985085176_n.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div
-        class="w-lightbox-item"
-        tabindex="0"
-        aria-controls="w-lightbox-view"
-        role="tab"
-        aria-label="show item 12 of 12"
-      >
-        <div class="w-lightbox-thumbnail">
-          <img
-            class="w-lightbox-img w-lightbox-tall w-lightbox-thumbnail-image"
-            src="https://uploads-ssl.webflow.com/5d71994f994c3aab41b95759/5ed645bf601842d2ee09d863_30602641_377211976021894_6141786955353948160_n.jpg"
-            alt=""
-          />
-        </div>
-      </div> -->
     </div>
   </div>
 </div>
@@ -440,24 +320,26 @@
   }
 
   .w-lightbox-left {
-    display: none;
-    bottom: 0;
-    left: 0;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yMCAwIDI0IDQwIiB3aWR0aD0iMjQiIGhlaWdodD0iNDAiPjxnIHRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHBhdGggZD0ibTAgMGg1djIzaDIzdjVoLTI4eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDN2MjNoMjN2M2gtMjZ6IiBmaWxsPSIjZmZmIi8+PC9nPjwvc3ZnPg==');
+    /* display: none; */
+    left: 2%;
+    bottom: 45%;
+    top: 45%;
+    /* background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yMCAwIDI0IDQwIiB3aWR0aD0iMjQiIGhlaWdodD0iNDAiPjxnIHRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHBhdGggZD0ibTAgMGg1djIzaDIzdjVoLTI4eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDN2MjNoMjN2M2gtMjZ6IiBmaWxsPSIjZmZmIi8+PC9nPjwvc3ZnPg=='); */
   }
 
   .w-lightbox-right {
-    display: none;
-    right: 0;
-    bottom: 0;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMjQgNDAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0MCI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMC0waDI4djI4aC01di0yM2gtMjN6IiBvcGFjaXR5PSIuNCIvPjxwYXRoIGQ9Im0xIDFoMjZ2MjZoLTN2LTIzaC0yM3oiIGZpbGw9IiNmZmYiLz48L2c+PC9zdmc+');
+    /* display: none; */
+    right: 2%;
+    bottom: 45%;
+    top: 45%;
+    /* background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMjQgNDAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0MCI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMC0waDI4djI4aC01di0yM2gtMjN6IiBvcGFjaXR5PSIuNCIvPjxwYXRoIGQ9Im0xIDFoMjZ2MjZoLTN2LTIzaC0yM3oiIGZpbGw9IiNmZmYiLz48L2c+PC9zdmc+'); */
   }
 
   .w-lightbox-close {
     right: 0;
-    height: 2.6em;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMTggMTciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMCAwaDd2LTdoNXY3aDd2NWgtN3Y3aC01di03aC03eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDd2LTdoM3Y3aDd2M2gtN3Y3aC0zdi03aC03eiIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4=');
-    background-size: 18px;
+    /* height: 2.6em; */
+    /* background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMTggMTciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMCAwaDd2LTdoNXY3aDd2NWgtN3Y3aC01di03aC03eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDd2LTdoM3Y3aDd2M2gtN3Y3aC0zdi03aC03eiIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4='); */
+    /* background-size: 18px; */
   }
 
   .w-lightbox-strip {
@@ -551,7 +433,8 @@
 
   .w-lightbox-inactive,
   .w-lightbox-inactive:hover {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
   }
 
   .w-richtext figure img {

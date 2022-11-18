@@ -93,7 +93,12 @@
   </div>
 
   {#if isSlideshowOpen}
-    <StillsSlideshow {activePic} />
+    <StillsSlideshow
+      {activePic}
+      on:close={() => {
+        isSlideshowOpen = false
+      }}
+    />
   {/if}
 </div>
 
