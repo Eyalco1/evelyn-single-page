@@ -72,3 +72,67 @@ export const picsData = [
     active: false
   }
 ]
+
+export const videosData = [
+  {
+    link: 'https://mybrowseraddon.com/',
+    thumbnailSrc: 'https://i.ibb.co/j8b1BZw/image.png',
+    thumbnailAlt: 'Montage',
+    size: 364,
+    title: 'Montage'
+  },
+  {
+    link: 'https://mybrowseraddon.com/',
+    thumbnailSrc: 'https://i.ibb.co/nfSqqF8/image.png',
+    thumbnailAlt: 'IDF Montage',
+    size: 744,
+    title: 'IDF Montage'
+  },
+  {
+    link: 'https://mybrowseraddon.com/',
+    thumbnailSrc: 'https://i.ibb.co/r0vm54m/image.png',
+    thumbnailAlt: 'Hot Soup',
+    size: 364,
+    title: 'Hot Soup'
+  },
+  {
+    link: 'https://mybrowseraddon.com/',
+    thumbnailSrc: 'https://i.ibb.co/VJVWpP2/image.png',
+    thumbnailAlt: 'The Secrets of The Universe',
+    size: 744,
+    title: 'The Secrets of The Universe'
+  },
+  {
+    link: 'https://mybrowseraddon.com/',
+    thumbnailSrc: 'https://i.ibb.co/sj4GRLN/image.png',
+    thumbnailAlt: 'A Breath',
+    size: 744,
+    title: 'A Breath'
+  },
+  {
+    link: 'https://mybrowseraddon.com/',
+    thumbnailSrc: 'https://i.ibb.co/n7j5d3B/image.png',
+    thumbnailAlt: 'Coffee and Cigarette',
+    size: 744,
+    title: 'Coffee and Cigarette'
+  }
+]
+
+/*
+<li class="spotlight-placeholder spotlight-16:9 item ">
+      <a href="/work/coffee-and-cigarette" class="project-link mfp-iframe">
+        <div class="placeholder ratio-16:9">
+          <img
+            src="https://i.ibb.co/n7j5d3B/image.png"
+            class="lazyautosizes ls-is-cached lazyloaded"
+            alt="Coffee and Cigarette"
+            sizes="744px"
+          />
+        </div>
+        <span class="overlay svelte-15pnq89"
+          ><span><strong class="svelte-15pnq89">קפה וסיגריה</strong></span
+          ></span
+        >
+      </a>
+    </li>
+*/

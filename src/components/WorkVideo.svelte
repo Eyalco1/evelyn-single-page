@@ -1,115 +1,34 @@
 <script>
-  import VideoThumbnail from './VideoThumbnail.svelte'
+  import { videosData } from '../data'
 </script>
 
 <div class="work-container">
   <ul class="media-grid media-grid--block">
-    <li class="spotlight-placeholder spotlight-16:9 item">
-      <a href="/work/montage" class="project-link mfp-iframe">
-        <div class="placeholder ratio-16:9">
-          <img
-            src="https://i.ibb.co/j8b1BZw/image.png"
-            class="lazyautosizes lazyloaded"
-            alt="Montage"
-            sizes="364px"
-          />
-        </div>
-        <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">מונטז׳</strong></span></span
-        >
-      </a>
-    </li>
-    <li class="spotlight-placeholder spotlight-16:9 item ">
-      <a href="/work/idf-montage" class="project-link mfp-iframe">
-        <div class="placeholder ratio-16:9">
-          <img
-            src="https://i.ibb.co/nfSqqF8/image.png"
-            class="lazyautosizes lazyloaded"
-            alt="IDF Montage"
-            sizes="744px"
-          />
-        </div>
-        <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">מונטז׳ צה״ל</strong></span
-          ></span
-        >
-      </a>
-    </li>
-    <li class="spotlight-placeholder spotlight-16:9 item ">
-      <a href="/work/hot-soup" class="project-link mfp-iframe">
-        <div class="placeholder ratio-16:9">
-          <img
-            src="https://i.ibb.co/r0vm54m/image.png"
-            class="lazyautosizes lazyloaded"
-            alt="Hot Soup"
-            sizes="364px"
-          />
-        </div>
-        <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">מרק חם</strong></span></span
-        >
-      </a>
-    </li>
-    <li class="spotlight-placeholder spotlight-16:9 item ">
-      <a
-        href="/work/the-secrets-of-the-universe"
-        class="project-link mfp-iframe"
-      >
-        <div class="placeholder ratio-16:9">
-          <img
-            src="https://i.ibb.co/VJVWpP2/image.png"
-            class="lazyautosizes lazyloaded"
-            alt="The Secrets of The Universe"
-            sizes="744px"
-          />
-        </div>
-        <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">סודות היקום</strong></span
-          ></span
-        >
-      </a>
-    </li>
-    <li class="spotlight-placeholder spotlight-16:9 item ">
-      <a href="/work/a-breath" class="project-link mfp-iframe">
-        <div class="placeholder ratio-16:9">
-          <img
-            src="https://i.ibb.co/sj4GRLN/image.png"
-            class="lazyautosizes lazyloaded"
-            alt="A Breath"
-            sizes="744px"
-          />
-        </div>
-        <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">נשימה</strong></span></span
-        >
-      </a>
-    </li>
-    <li class="spotlight-placeholder spotlight-16:9 item ">
-      <a href="/work/coffee-and-cigarette" class="project-link mfp-iframe">
-        <div class="placeholder ratio-16:9">
-          <img
-            src="https://i.ibb.co/n7j5d3B/image.png"
-            class="lazyautosizes ls-is-cached lazyloaded"
-            alt="Coffee and Cigarette"
-            sizes="744px"
-          />
-        </div>
-        <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">קפה וסיגריה</strong></span
-          ></span
-        >
-      </a>
-    </li>
+    {#each videosData as { link, size, thumbnailAlt, thumbnailSrc, title }}
+      <li class="spotlight-placeholder spotlight-16:9 item">
+        <a href={link} class="project-link mfp-iframe">
+          <div class="placeholder ratio-16:9">
+            <img
+              src={thumbnailSrc}
+              class="lazyautosizes lazyloaded"
+              alt={thumbnailAlt}
+              sizes={`${size}px`}
+            />
+          </div>
+          <span class="overlay svelte-15pnq89">
+            <span>
+              <strong class="svelte-15pnq89">
+                {title}
+              </strong>
+            </span>
+          </span>
+        </a>
+      </li>
+    {/each}
   </ul>
 </div>
 
 <style>
-  :root {
-    --evelyna-primary: #ef9ab2;
-    --evelyna-black: #6d6d6d;
-    --evelyna-white: #fff3f8;
-  }
-
   .media-grid {
     padding: 0;
     list-style: none;
