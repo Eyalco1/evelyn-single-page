@@ -16,28 +16,30 @@
 
 <div
   role="listitem"
-  class="c-stills__li w-dyn-item"
+  class="collage-pic-cont c-stills__li c-stills__lightbox-link"
   on:click={() => openSlideShow()}
   on:keyup={() => openSlideShow()}
 >
-  <div class="collage-pic-cont">
-    <div class="c-stills__lightbox-link w-inline-block w-lightbox">
-      <img
-        {src}
-        {alt}
-        sizes="(max-width: 479px) 45vw, (max-width: 767px) 46vw, (max-width: 991px) 35vw, 372px"
-        class="c-stills__img-thumb"
-      />
-    </div>
-    <span class="overlay">
-      <span>
-        <strong> {id} </strong>
-      </span>
+  <img {src} {alt} class="c-stills__img-thumb" />
+  <span class="overlay">
+    <span>
+      <strong> {id} </strong>
     </span>
-  </div>
+  </span>
 </div>
 
 <style>
+  .collage-pic-cont {
+    position: relative;
+    width: 50%;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .c-stills__li {
     position: relative;
     display: inline-block;

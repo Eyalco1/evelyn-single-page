@@ -4,12 +4,14 @@
 
 <footer class="footer-copyright-container">
   <div class="f-container">
-    <h1>Evelyn Rosenfeld</h1>
-    <h3>Very beautiful description</h3>
+    <h1>Let's Talk!</h1>
+    <a href="mailto:whatisyouremail@evelyn.com">
+      <h3>whatisyouremail@evelyn.com</h3>
+    </a>
     <div id="socials">
       <Socials size="xl" color="var(--evelyna-primary)" />
     </div>
-    <h1 id="copy">כל הזכויות שמורות לאוולין ואייל המלכים נודר &copy;</h1>
+    <h1 id="copy">&copy; 2022 Evelyn Rosenfled. All rights reserved.</h1>
   </div>
 </footer>
 
@@ -33,7 +35,7 @@
 
   .f-container h1 {
     color: var(--evelyna-primary);
-    font-size: 34px;
+    font-size: 40px;
     font-weight: 900;
     text-align: center;
     line-height: 0;
@@ -41,10 +43,10 @@
 
   .f-container h3 {
     color: var(--evelyna-primary);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     text-align: center;
-    line-height: 2;
+    line-height: 1;
   }
 
   #socials {
@@ -55,7 +57,8 @@
 
   #copy {
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 600;
     /* color: var(--evelyna-white); */
   }
 </style>
