@@ -2,7 +2,7 @@
 
 <div class="about-cont">
   <div class="img-cont">
-    <img src="/src/assets/img/Jorge.jpeg" alt="Jorge" />
+    <img src="https://i.ibb.co/FhPtpdw/Jorge.jpg" alt="Jorge" />
   </div>
   <span class="my-name-is"> Evelyn Rosenfeld </span>
   <br /><br />
