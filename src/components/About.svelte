@@ -20,7 +20,7 @@
 
 <style>
   .about-cont {
-    padding: 150px;
+    padding: 0px;
     margin-bottom: 50px;
   }
 
