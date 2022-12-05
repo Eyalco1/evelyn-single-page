@@ -15,7 +15,7 @@
           />
         </div>
         <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">מונטז׳</strong></span></span
+          ><span><strong class="svelte-15pnq89">Montage</strong></span></span
         >
       </a>
     </li>
@@ -30,7 +30,7 @@
           />
         </div>
         <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">מונטז׳ צה״ל</strong></span
+          ><span><strong class="svelte-15pnq89">IDF Montage</strong></span
           ></span
         >
       </a>
@@ -46,7 +46,7 @@
           />
         </div>
         <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">מרק חם</strong></span></span
+          ><span><strong class="svelte-15pnq89">Hot Soup</strong></span></span
         >
       </a>
     </li>
@@ -64,7 +64,9 @@
           />
         </div>
         <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">סודות היקום</strong></span
+          ><span
+            ><strong class="svelte-15pnq89">The Secrets of The Universe</strong
+            ></span
           ></span
         >
       </a>
@@ -80,7 +82,22 @@
           />
         </div>
         <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">נשימה</strong></span></span
+          ><span><strong class="svelte-15pnq89">A Breath</strong></span></span
+        >
+      </a>
+    </li>
+    <li class="spotlight-placeholder spotlight-16:9 item ">
+      <a href="/work/coffee-and-cigarette" class="project-link mfp-iframe">
+        <div class="placeholder ratio-16:9">
+          <img
+            src="https://i.ibb.co/D89RqbJ/2021.png"
+            class="lazyautosizes ls-is-cached lazyloaded"
+            alt="Coffee and Cigarette"
+            sizes="744px"
+          />
+        </div>
+        <span class="overlay svelte-15pnq89"
+          ><span><strong class="svelte-15pnq89">Indinegev</strong></span></span
         >
       </a>
     </li>
@@ -95,7 +112,8 @@
           />
         </div>
         <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">קפה וסיגריה</strong></span
+          ><span
+            ><strong class="svelte-15pnq89">Coffee and Cigarette</strong></span
           ></span
         >
       </a>
@@ -199,8 +217,8 @@
   }
 
   .overlay strong {
-    font-family: Lato, Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;
-    font-weight: 300;
+    font-family: Poppins;
+    font-weight: 600;
     font-size: 1.8rem;
     font-style: normal;
     line-height: 1.75;
@@ -226,7 +244,7 @@
       left: 0;
       padding: 1.6rem;
       position: absolute;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(239, 154, 178, 0.8);
       -moz-transition: opacity 0.25s ease-in-out;
       -webkit-transition: opacity 0.25s ease-in-out;
       -o-transition: opacity 0.25s ease-in-out;
@@ -242,7 +260,7 @@
     }
 
     .overlay strong {
-      color: #000;
+      color: var(--evelyna-white);
     }
 
     .overlay > span {

@@ -10,11 +10,18 @@
     I tell people's stories through video and stills.
   </span>
   <p class="introduction">
-    Hi! I'm Evelyna, an Editor. a Videographer. a Visual Storyteller. With over
-    10 years of experience in editing, writing, directing and filming, starting
-    with writing scripts and creating videos on a YouTube channel as a hobby,
-    studying at a pre-military college with an emphasis on directing and editing
-    short films, and intensive editing for the IDF spokesperson.
+    From a young age, I found that having an artistic outlet was the perfect way
+    to express my thoughts, creativity, and imagination. I fell in love with
+    filmmaking through writing scripts and operating a YouTube channel, studying
+    cinematography at a pre-military college with an emphasis on directing, and
+    intensive editing in the IDF.
+  </p>
+  <br />
+  <p class="introduction" style="padding-bottom: 30px;">
+    My goal in every project, from editing a short video and image shoots to a
+    full-length film, is to create an emotional experience for the viewer,
+    whether it is a dramatic and exciting atmosphere and whether it is a light
+    and humorous content, according to the client's wishes.
   </p>
 </div>
 
@@ -46,7 +53,7 @@
     font-family: Ploni;
     font-size: 20px;
     font-weight: 400;
-    padding-bottom: 30px;
+
     text-align: center;
     line-height: 28px;
   }
