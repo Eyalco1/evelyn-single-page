@@ -1,5 +1,4 @@
 <script>
-  import { Link } from 'svelte-navigator'
   import About from './components/About.svelte'
   import Work from './components/Work.svelte'
   import Contact from './components/Contact.svelte'
@@ -67,6 +66,7 @@
 
   #nav-cont {
     padding: 2rem;
+    padding-bottom: 0;
   }
 
   /* .read-the-docs {

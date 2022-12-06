@@ -1,5 +1,5 @@
 <script>
-  import VideoThumbnail from './VideoThumbnail.svelte'
+  import { videosData } from '../data'
 </script>
 
 <div class="work-container">
@@ -122,12 +122,6 @@
 </div>
 
 <style>
-  :root {
-    --evelyna-primary: #ef9ab2;
-    --evelyna-black: #6d6d6d;
-    --evelyna-white: #fff3f8;
-  }
-
   .media-grid {
     padding: 0;
     list-style: none;
@@ -226,11 +220,8 @@
     margin: 0;
     letter-spacing: 0;
     text-transform: none;
-  }
-
-  .overlay strong {
     font-style: normal;
-    color: #000;
+    color: var(--title-color);
   }
 
   @media (hover: hover) {
