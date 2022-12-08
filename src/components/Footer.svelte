@@ -19,7 +19,7 @@
     <div class="right-cont">
       <div class="f-container">
         <div class="img-cont">
-          <img src="/src/assets/img/Jorge.jpeg" alt="Jorge" />
+          <img src="/src/assets/img/Evelyn.png" alt="Evelyn" />
         </div>
       </div>
     </div>

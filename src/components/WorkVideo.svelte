@@ -6,7 +6,7 @@
   <ul class="media-grid media-grid--block">
     {#each videosData as { link, size, thumbnailAlt, thumbnailSrc, title }}
       <li class="spotlight-placeholder spotlight-16:9 item">
-        <a href={link} class="project-link mfp-iframe">
+        <a href={link} target="_Blank" class="project-link mfp-iframe">
           <div class="placeholder ratio-16:9">
             <img
               src={thumbnailSrc}
@@ -15,9 +15,13 @@
               sizes="{size}px"
             />
           </div>
-          <span class="overlay svelte-15pnq89"
-            ><span><strong class="svelte-15pnq89">{title}</strong></span></span
-          >
+          <span class="overlay svelte-15pnq89">
+            <span>
+              <strong class="svelte-15pnq89">
+                {title}
+              </strong>
+            </span>
+          </span>
         </a>
       </li>
     {/each}

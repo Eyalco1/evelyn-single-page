@@ -75,42 +75,42 @@ export const picsData = [
 
 export const videosData = [
   {
-    link: 'https://mybrowseraddon.com/',
+    link: 'https://youtu.be/l-MY7IUDXkI',
     thumbnailSrc: 'https://i.ibb.co/j8b1BZw/image.png',
     thumbnailAlt: 'Montage',
     size: 364,
     title: 'Montage'
   },
   {
-    link: 'https://mybrowseraddon.com/',
+    link: 'https://youtu.be/82HAN7ZRvnU',
     thumbnailSrc: 'https://i.ibb.co/nfSqqF8/image.png',
-    thumbnailAlt: 'IDF Montage',
+    thumbnailAlt: 'Through The Eyes - IDF',
     size: 744,
-    title: 'IDF Montage'
+    title: 'Through The Eyes - IDF'
   },
   {
-    link: 'https://mybrowseraddon.com/',
+    link: 'https://youtu.be/MaXwp_gRBO8',
     thumbnailSrc: 'https://i.ibb.co/r0vm54m/image.png',
     thumbnailAlt: 'Hot Soup',
     size: 364,
     title: 'Hot Soup'
   },
   {
-    link: 'https://mybrowseraddon.com/',
+    link: 'https://youtu.be/BoMjxwkxaCI',
     thumbnailSrc: 'https://i.ibb.co/VJVWpP2/image.png',
     thumbnailAlt: 'The Secrets of The Universe',
     size: 744,
     title: 'The Secrets of The Universe'
   },
   {
-    link: 'https://mybrowseraddon.com/',
+    link: 'https://youtu.be/SL3nbDiWfSo',
     thumbnailSrc: 'https://i.ibb.co/sj4GRLN/image.png',
     thumbnailAlt: 'A Breath',
     size: 744,
     title: 'A Breath'
   },
   {
-    link: 'https://mybrowseraddon.com/',
+    link: 'https://youtu.be/Qflb5LWemGc',
     thumbnailSrc: 'https://i.ibb.co/D89RqbJ/2021.png',
     thumbnailAlt: 'Indinegev',
     size: 744,

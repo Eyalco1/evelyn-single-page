@@ -2,7 +2,8 @@
 
 <div class="about-cont">
   <div class="img-cont">
-    <img src="https://i.ibb.co/FhPtpdw/Jorge.jpg" alt="Jorge" />
+    <!-- <img src="https://i.ibb.co/FhPtpdw/Jorge.jpg" alt="Evelyn" /> -->
+    <img src="/src/assets/img/Evelyn.png" alt="Evelyn" />
   </div>
   <span class="my-name-is"> Evelyn Rosenfeld </span>
   <br /><br />
