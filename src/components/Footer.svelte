@@ -66,18 +66,20 @@
   }
 
   .left-cont {
-    padding-left: 100px;
+    padding-left: 70px;
     margin: auto 0;
+    /* position: relative; */
+    /* top: 30px; */
   }
 
   .right-cont {
-    padding-right: 100px;
+    padding-right: 70px;
   }
 
   #socials {
     margin: auto;
     text-align: center;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
   }
 
   img {

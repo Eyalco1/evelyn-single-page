@@ -211,8 +211,8 @@
   }
 
   .overlay strong {
-    font-family: Poppins;
-    font-weight: 600;
+    font-family: Ploni;
+    font-weight: 400;
     font-size: 1.8rem;
     font-style: normal;
     line-height: 1.75;
