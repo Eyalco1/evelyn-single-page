@@ -111,28 +111,16 @@ export const videosData = [
   },
   {
     link: 'https://mybrowseraddon.com/',
+    thumbnailSrc: 'https://i.ibb.co/D89RqbJ/2021.png',
+    thumbnailAlt: 'Indinegev',
+    size: 744,
+    title: 'Indinegev'
+  },
+  {
+    link: 'https://youtu.be/vehP6I8rQjw',
     thumbnailSrc: 'https://i.ibb.co/n7j5d3B/image.png',
     thumbnailAlt: 'Coffee and Cigarette',
     size: 744,
     title: 'Coffee and Cigarette'
   }
 ]
-
-/*
-<li class="spotlight-placeholder spotlight-16:9 item ">
-      <a href="/work/coffee-and-cigarette" class="project-link mfp-iframe">
-        <div class="placeholder ratio-16:9">
-          <img
-            src="https://i.ibb.co/n7j5d3B/image.png"
-            class="lazyautosizes ls-is-cached lazyloaded"
-            alt="Coffee and Cigarette"
-            sizes="744px"
-          />
-        </div>
-        <span class="overlay svelte-15pnq89"
-          ><span><strong class="svelte-15pnq89">קפה וסיגריה</strong></span
-          ></span
-        >
-      </a>
-    </li>
-*/

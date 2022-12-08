@@ -37,6 +37,7 @@
   main {
     /* height: 100vh; */
     padding: 2rem;
+    padding-top: 0;
     /* display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1.2fr 2.5fr 0.3fr;

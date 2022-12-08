@@ -6,7 +6,7 @@
   <div class="content-cont">
     <div class="left-cont">
       <div class="f-container">
-        <h1>Let's Talk!</h1>
+        <h1 style="user-select: none;">Let's Talk!</h1>
         <a href="mailto:rosenfeldevelyn@gmail.com">
           <h3>rosenfeldevelyn@gmail.com</h3>
         </a>
@@ -31,7 +31,7 @@
   .footer-copyright-container {
     bottom: 0;
     width: 100%;
-    user-select: none;
+
     background-color: var(--evelyna-primary);
   }
 
@@ -62,7 +62,7 @@
     font-size: 18px;
     font-weight: 500;
     text-align: center;
-    line-height: 1;
+    /* line-height: 1; */
   }
 
   .left-cont {
@@ -94,6 +94,7 @@
     font-size: 18px;
     font-weight: 500;
     padding-bottom: 20px;
+    user-select: none;
     /* color: var(--evelyna-white); */
   }
 </style>
